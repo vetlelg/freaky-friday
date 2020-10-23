@@ -3,52 +3,112 @@
 }
 
 body {
-  padding: 100px 0 0 0;
-  font-family: sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  color: #05172C;
+}
+
+body, .introduction {
+  background-color: white;
+}
+
+.navigation {
+  background-color: white;
+  margin: 0 auto;
+  padding: 0 5%;
+  position: fixed;
+  width: 100%;
+  border-bottom: #86BF3E 1px solid;
+  z-index: 1;
 }
 
 nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: white;
-  width: 100%;
-  height: 100px;
-  top: 0;
-  left: 0;
-  padding: 20px;
-  position: fixed;
-  z-index: 1;
-  border-bottom: 2px black solid;
+  float: right;
 }
 
-nav .navigation {
-  margin-right: 20px;
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
   display: inline-block;
-  background-color: white;
+  position: relative;
+  padding: 20px 0;
+  margin-left: 20px;
+}
+
+.logo {
+  display: inline-block;
+  position: relative;
+  padding: 20px 0;
+}
+
+.navigation a {
+  color: #05172C;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border: #86BF3E 2px solid;
+  padding: 10px 5px;
+}
+
+.navigation a:hover {
+  color: #05172C;
+
+}
+
+.navigation a::before {
+  content: '';
+  display: block;
+  height: 5px;
+  background-color: #86BF3E;
+  position: absolute;
+  top: 0;
+  width: 0%;
+  transition: all ease-in-out 100ms;
+}
+
+.navigation a:hover::before {
+  width: 100%;
+}
+
+.navigation a:focus {
+  background-color: #86BF3E;
+  transition: all ease-in-out 100ms;
 }
 
 button {
   background-color: white;
 }
 
-.dropdown {
-  position: absolute;
-  background-color: white;
-}
-
 .front-page-header {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-items: center;
+  justify-content: space-evenly;
   margin: 0;
   width: 100%;
-  height: 500px;
+  height: 100%;
   background-image: url("../images/dinner.jpg");
+  position: absolute;
+}
+
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  width: 80%;
+  height: 25%;
 }
 
 .introduction {
+  display: flex;
+  align-items: center;
   text-align: center;
-  width: 100%;
-  background-color: white;
+  justify-content: space-around;
+  width: 25%;
+  height: 80%;
+  border: 3px solid #86BF3E;
 }
