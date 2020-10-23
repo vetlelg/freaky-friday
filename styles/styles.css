@@ -55,8 +55,8 @@ nav li {
 }
 
 .navigation a:hover {
-  color: #05172C;
-
+  background-color: rgba(134, 191, 62, 0.5);
+  transition: all ease-in-out 100ms;
 }
 
 .navigation a::before {
@@ -72,11 +72,6 @@ nav li {
 
 .navigation a:hover::before {
   width: 100%;
-}
-
-.navigation a:focus {
-  background-color: #86BF3E;
-  transition: all ease-in-out 100ms;
 }
 
 button {
